@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.parcellocker.R;
 import com.example.parcellocker.cu16.CU16Service;
-import com.example.parcellocker.db.DoorEntity;
+import com.example.parcellocker.db.entities.DoorEntity;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;

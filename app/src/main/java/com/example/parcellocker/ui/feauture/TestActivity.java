@@ -14,8 +14,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.parcellocker.R;
 import com.example.parcellocker.cu16.CU16Client;
 import com.example.parcellocker.cu16.CU16Service;
-import com.example.parcellocker.db.DoorDao;
-import com.example.parcellocker.db.DoorEntity;
+import com.example.parcellocker.db.dao.DoorDao;
+import com.example.parcellocker.db.entities.DoorEntity;
 import com.example.parcellocker.db.MachineDatabase;
 import com.example.parcellocker.ui.feauture.adapter.*;
 

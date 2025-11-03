@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.parcellocker"
-    compileSdk = 34
+    namespace = "com.rspickup.parcellocker"
+    compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.example.parcellocker"
+        applicationId = "com.rspickup.parcellocker"
         minSdk = 24
         targetSdk = 33
         versionCode = 1
@@ -26,29 +26,28 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
+    buildToolsVersion = "36.1.0"
 }
 
 dependencies {
     // UI dependencies
     implementation("androidx.appcompat:appcompat:1.7.1")
-    implementation("com.google.android.material:material:1.12.0")
+    implementation("com.google.android.material:material:1.13.0")
     implementation("androidx.constraintlayout:constraintlayout:2.2.1")
     implementation("com.google.android.flexbox:flexbox:3.0.0")
 
     // SQLite (Room Persistence Library)
-    implementation("androidx.room:room-runtime:2.6.1")
-    annotationProcessor("androidx.room:room-compiler:2.6.1") // For Java
-    // If using Kotlin KAPT, replace annotationProcessor with:
-    // kapt("androidx.room:room-compiler:2.6.1")
-    implementation("androidx.room:room-ktx:2.6.1") // Coroutines support (optional)
+    implementation("androidx.room:room-runtime:2.8.1")
+    annotationProcessor("androidx.room:room-compiler:2.8.1") // For Java projects
 
-
+    // JSON conversion
+    implementation("com.google.code.gson:gson:2.10.1")
 
     // Testing
     testImplementation("junit:junit:4.13.2")
-    androidTestImplementation("androidx.test.ext:junit:1.2.1")
+    androidTestImplementation("androidx.test.ext:junit:1.3.0")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.6.1")
 }
